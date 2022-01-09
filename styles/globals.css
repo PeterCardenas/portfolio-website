@@ -2,12 +2,38 @@
 @tailwind components;
 @tailwind utilities;
 
+@font-face {
+  font-family: "Din";
+  src: url(/fonts/DIN.ttf);
+  font-weight: 300;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Din";
+  src: url(/fonts/DIN-Black.ttf);
+  font-weight: 600;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Din";
+  src: url(/fonts/DIN-Bold.ttf);
+  font-weight: 500;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Din";
+  src: url(/fonts/DIN-Medium.ttf);
+  font-weight: 400;
+  font-display: swap;
+}
+
 html,
 body {
   padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
   scroll-behavior: smooth;
 }
 
