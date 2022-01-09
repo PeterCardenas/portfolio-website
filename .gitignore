@@ -11,6 +11,7 @@
 # production
 /build
 /build_files
+/.next
 
 # misc
 .DS_Store
