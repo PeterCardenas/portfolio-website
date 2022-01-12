@@ -2,6 +2,7 @@ import type { NextPage } from "next";
 import Head from "next/head";
 import About from "components/sections/About";
 import ProgressBar from "components/ProgressBar";
+import Experiences from "components/sections/Experiences";
 
 const Home: NextPage = () => {
   return (
@@ -12,6 +13,7 @@ const Home: NextPage = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <About />
+      <Experiences />
       <ProgressBar />
     </div>
   );
