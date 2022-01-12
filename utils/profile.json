@@ -1,0 +1,54 @@
+{
+  "about": {
+    "bio": "I’m a software engineer specializing in building frontends in React and TypeScript.",
+    "firstName": "Peter",
+    "profilePic": "/images/profile-pic.png",
+    "linkedinUrl": "https://linkedin.com/peter-cardenas",
+    "githubUrl": "https://github.com/PeterCardenas",
+    "email": "peterpcardenas@protonmail.com",
+    "source": "https://github.com/PeterCardenas/portfolio-website",
+    "resume": "/public/resume.pdf"
+  },
+  "experiences": [
+    {
+      "company": "Ladder",
+      "title": "Founding Engineer",
+      "logo": "/images/ladder-logo.webp",
+      "skills": ["TypeScript", "React", "React Native", "Firebase", "Node.js", "Redux"]
+    },
+    {
+      "company": "Gusto",
+      "title": "Software Engineer Intern",
+      "logo": "/images/gusto-logo.webp",
+      "skills": ["React", "Reflux.js", "Jest", "Ruby on Rails", "RSpec", "SQL"]
+    },
+    {
+      "company": "7-Eleven",
+      "title": "Software Engineer Intern",
+      "logo": "/images/7-eleven-logo.webp",
+      "skills": ["React Native", "Redux", "Node.js", "Express.js", "SQL", "AWS"]
+    }
+  ],
+  "projects": [
+    {
+      "name": "Travel Scares Me",
+      "description": "A web app to view risks, including COVID and national security concerns, of travelling.",
+      "link": "https://travelscares.me",
+      "image": "/images/travel-scares-me-preview.png",
+      "skills": ["React", "Python", "Flask", "SQL", "AWS"]
+    },
+    {
+      "name": "Maze Runner",
+      "description": "A script that simulates a vehicle running a maze with LiDAR and camera sensors.",
+      "link": "https://drive.google.com/file/d/1MtDaF5W5_TU7Rma1P7pZpv4ZgfnCCR4n/view?usp=sharing",
+      "image": "/images/maze-runner-preview.png",
+      "skills": ["Python", "OpenCV", "ROS", "Gazebo"]
+    },
+    {
+      "name": "UTCS Event Scheduler",
+      "description": "A script that adds events to a Google Calendar scraped from the UTCS events calendar.",
+      "link": "https://github.com/PeterCardenas/utcs-calendar",
+      "skills": ["Python", "Google Calendar API", "BeautifulSoup with Requests"]
+    }
+  ]
+}
