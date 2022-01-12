@@ -45,7 +45,7 @@ const ExperienceCard = ({ experience }: ExperienceCardProps) => {
               <div className="transition mb-0.5 group-hover:rotate-90">
                 <DoubleChevronRight />
               </div>
-              <div className="absolute transition-all left-0 top-5 bg-alternate opacity-25 -m-1 w-0 group-hover:w-full h-1/4" />
+              <div className="absolute transition-all left-0 top-6 bg-alternate opacity-25 -m-1 w-0 group-hover:w-full h-1/5" />
             </div>
           </div>
         </div>
