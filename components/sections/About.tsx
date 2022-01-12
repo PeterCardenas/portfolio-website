@@ -6,6 +6,7 @@ import profile from "utils/profile.json";
 
 const About = () => {
   const { about } = profile;
+
   return (
     <div className="h-screen w-screen">
       <div className="h-1/4" />
