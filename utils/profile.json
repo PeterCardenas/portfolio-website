@@ -14,7 +14,14 @@
       "company": "Ladder",
       "title": "Founding Engineer",
       "logo": "/images/ladder-logo.webp",
-      "skills": ["TypeScript", "React", "React Native", "Firebase", "Node.js", "Redux"]
+      "skills": [
+        "TypeScript",
+        "React",
+        "React Native",
+        "Firebase",
+        "Node.js",
+        "Redux"
+      ]
     },
     {
       "company": "Gusto",
