@@ -32,7 +32,7 @@
 
 @layer base {
   h1 {
-    @apply font-bold text-5xl;
+    @apply font-medium text-5xl;
   }
 
   h2 {
@@ -40,7 +40,7 @@
   }
 
   h3 {
-    @apply font-bold text-2xl;
+    @apply font-medium text-2xl;
   }
 
   p {
