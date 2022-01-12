@@ -3,7 +3,7 @@ const ProgressBar = () => {
     <div className="fixed bottom-0 right-8">
       <div className="flex flex-row">
         <div className="text-right flex flex-col justify-between pb-16 mr-[26px]">
-          <p>About</p>
+          <p className="text-alternate">About</p>
           <p>Experience</p>
           <p>Work</p>
           <p>Contact</p>
