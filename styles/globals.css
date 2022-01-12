@@ -30,6 +30,28 @@
   font-display: swap;
 }
 
+@layer base {
+  h1 {
+    @apply font-bold text-5xl;
+  }
+
+  h2 {
+    @apply font-normal text-4xl;
+  }
+
+  h3 {
+    @apply font-bold text-2xl;
+  }
+
+  p {
+    @apply font-light text-xl;
+  }
+
+  span {
+    @apply font-light text-lg;
+  }
+}
+
 html,
 body {
   padding: 0;
