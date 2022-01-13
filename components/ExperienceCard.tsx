@@ -1,5 +1,6 @@
 import DoubleChevronRight from "components/icons/DoubleChevronRight";
 import Image from "next/image";
+import { Fragment } from "react";
 import { Experience } from "utils/profile";
 
 interface ExperienceCardProps {
@@ -30,12 +31,14 @@ const ExperienceCard = ({ experience }: ExperienceCardProps) => {
             </div>
             <div>
               {experience.skills.map((skill, index) => (
-                <>
+                <Fragment
+                  key={`${experience.company}-${experience.title}-${skill}`}
+                >
                   <span>{skill}</span>
                   {index !== experience.skills.length - 1 && (
                     <span className="text-alternate"> ⋅ </span>
                   )}
-                </>
+                </Fragment>
               ))}
             </div>
           </div>
