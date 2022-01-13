@@ -46,7 +46,7 @@ const ExperienceCard = ({ experience }: ExperienceCardProps) => {
             <div className="relative flex flex-row items-end">
               <span className="text-alternate mr-1">See more</span>
               <div className="transition mb-0.5 group-hover:rotate-90">
-                <DoubleChevronRight />
+                <DoubleChevronRight theme="alternate" />
               </div>
               <div className="absolute transition-all left-0 top-6 bg-alternate opacity-25 -m-1 w-0 group-hover:w-full h-1/5" />
             </div>

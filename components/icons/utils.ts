@@ -1,4 +1,4 @@
-type Theme = "black" | "white";
+type Theme = "black" | "white" | "alternate";
 
 export interface IconProps {
   theme?: Theme;
@@ -14,6 +14,10 @@ export const getThemedStyles = (theme?: Theme) => {
     white: {
       strokeClass: "stroke-white",
       fillClass: "fill-white",
+    },
+    alternate: {
+      strokeClass: "stroke-alternate",
+      fillClass: "fill-alternate",
     },
   };
   return styles[theme];
