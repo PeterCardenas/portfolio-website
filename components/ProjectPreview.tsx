@@ -37,7 +37,7 @@ const ProjectPreview = ({ project, align }: ProjectPreviewProps) => {
           })}
         >
           <div className="flex relative shadow-md rounded-lg">
-            <div className="absolute w-full h-full bg-alternate opacity-50 z-10 rounded-lg" />
+            <div className="absolute w-full h-full bg-alternate transition-opacity duration-500 opacity-50 hover:opacity-10 z-10 rounded-lg" />
             <Image
               className="rounded-lg"
               src={project.image}
@@ -49,7 +49,7 @@ const ProjectPreview = ({ project, align }: ProjectPreviewProps) => {
         </div>
       </div>
       <div
-        className={cx("w-full flex flex-row", {
+        className={cx("w-full flex", {
           "justify-end": align === "left",
           "justify-start": align === "right",
         })}
