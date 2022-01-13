@@ -7,7 +7,7 @@ const Projects = (props: ProjectsProps) => {
   const { projects } = profile;
 
   return (
-    <div className="w-1/2 max-w-5xl mx-auto pt-40">
+    <div className="lg:w-1/2 w-3/4 max-w-5xl mx-auto pt-40">
       <h1>Look at some of the projects I&apos;ve worked on!</h1>
       <div className="mt-16">
         {projects.map((project, index) => (

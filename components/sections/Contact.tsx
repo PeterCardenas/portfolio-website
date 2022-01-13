@@ -6,7 +6,7 @@ const Contact = () => {
 
   return (
     <div className="relative w-screen h-screen pt-40">
-      <div className="w-1/2 max-w-5xl mx-auto">
+      <div className="lg:w-1/2 w-3/4 max-w-5xl mx-auto">
         <h1 className="mb-16">Feel free to reach out!</h1>
         <h2 className="mb-12">
           Whether you&apos;re hiring, working on a project, or just want to
@@ -17,8 +17,8 @@ const Contact = () => {
           <a href={about.resume}>my resume!</a>
         </h2>
       </div>
-      <div className="absolute z-10 left-0 bottom-0 px-8 h-12 w-full bg-black text-white flex flex-row items-center justify-between">
-        <div className="inline-flex items-end opacity-0">
+      <div className="absolute left-0 bottom-0 px-8 py-4 w-full bg-black text-white flex lg:flex-row flex-col items-center justify-between">
+        <div className="items-end opacity-0 lg:inline-flex hidden">
           <p className="mr-1">Source</p>
           <Link theme="white" />
         </div>

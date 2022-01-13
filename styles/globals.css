@@ -32,23 +32,23 @@
 
 @layer base {
   h1 {
-    @apply font-medium text-5xl;
+    @apply font-medium lg:text-5xl text-4xl transition-all;
   }
 
   h2 {
-    @apply font-normal text-4xl;
+    @apply font-normal lg:text-4xl text-3xl transition-all;
   }
 
   h3 {
-    @apply font-medium text-2xl;
+    @apply font-medium lg:text-2xl text-xl transition-all;
   }
 
   p {
-    @apply font-light text-xl;
+    @apply font-light lg:text-xl text-lg transition-all;
   }
 
   span {
-    @apply font-light text-lg;
+    @apply font-light lg:text-lg text-base transition-all;
   }
 }
 
