@@ -1,4 +1,4 @@
-import { UIEventHandler, useCallback, useRef, useState } from "react";
+import { useCallback, useEffect, useRef, useState } from "react";
 import type { NextPage } from "next";
 import Head from "next/head";
 import About from "components/sections/About";
@@ -8,29 +8,46 @@ import Projects from "components/sections/Projects";
 import Contact from "components/sections/Contact";
 
 const Home: NextPage = () => {
+  const scrollRef = useRef<HTMLDivElement>(null);
   const aboutRef = useRef<HTMLDivElement>(null);
   const experiencesRef = useRef<HTMLDivElement>(null);
   const projectsRef = useRef<HTMLDivElement>(null);
   const contactRef = useRef<HTMLDivElement>(null);
+  const [sectionProgress, setSectionProgress] = useState(0);
   const [activeSection, setActiveSection] = useState<string>("about");
 
-  const scrollHandler: UIEventHandler<HTMLDivElement> = useCallback((evt) => {
-    const { scrollTop, clientHeight } = evt.currentTarget;
-    const scrollPosition = scrollTop + clientHeight / 2;
-    const aboutCheckpoint = aboutRef.current?.clientHeight ?? 0;
-    const experiencesCheckpoint =
-      (experiencesRef.current?.clientHeight ?? 0) + aboutCheckpoint;
-    const projectsCheckpoint =
-      (projectsRef.current?.clientHeight ?? 0) + experiencesCheckpoint;
-    if (scrollPosition < aboutCheckpoint) {
-      setActiveSection("about");
-    } else if (scrollPosition < experiencesCheckpoint) {
-      setActiveSection("experiences");
-    } else if (scrollPosition < projectsCheckpoint) {
-      setActiveSection("work");
-    } else {
-      setActiveSection("contact");
-    }
+  useEffect(() => {
+    const interval = setInterval(() => {
+      if (scrollRef.current) {
+        const { scrollTop, clientHeight } = scrollRef.current;
+        const aboutCheckpoint = aboutRef.current?.clientHeight ?? 0;
+        const experiencesCheckpoint =
+          (experiencesRef.current?.clientHeight ?? 0) + aboutCheckpoint;
+        const projectsCheckpoint =
+          (projectsRef.current?.clientHeight ?? 0) + experiencesCheckpoint;
+        if (scrollTop < aboutCheckpoint) {
+          setSectionProgress(scrollTop / aboutCheckpoint);
+          setActiveSection("about");
+        } else if (scrollTop < experiencesCheckpoint) {
+          setSectionProgress(
+            (scrollTop - aboutCheckpoint) /
+              (experiencesCheckpoint - aboutCheckpoint)
+          );
+          setActiveSection("experiences");
+        } else if (scrollTop < projectsCheckpoint) {
+          setSectionProgress(
+            (scrollTop - experiencesCheckpoint) /
+              (projectsCheckpoint - experiencesCheckpoint)
+          );
+          setActiveSection("work");
+        } else {
+          setSectionProgress(0);
+          setActiveSection("contact");
+        }
+      }
+    }, 50);
+
+    return () => clearInterval(interval);
   }, []);
 
   const scrollToSection = useCallback((section: string) => {
@@ -55,7 +72,7 @@ const Home: NextPage = () => {
   return (
     <div
       className="w-screen h-screen overflow-y-scroll overflow-x-hidden"
-      onScroll={scrollHandler}
+      ref={scrollRef}
     >
       <Head>
         <title>Peter&apos;s Portfolio</title>
@@ -77,6 +94,7 @@ const Home: NextPage = () => {
       <ProgressBar
         activeSection={activeSection}
         scrollToSection={scrollToSection}
+        sectionProgress={sectionProgress}
       />
     </div>
   );
