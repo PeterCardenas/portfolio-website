@@ -16,6 +16,9 @@ module.exports = {
         whiter: "#FAFAFA",
         alternate: "#FD746C",
       },
+      gridTemplateRows: {
+        7: "repeat(7, minmax(0, 1fr))",
+      },
     },
   },
   plugins: [],
