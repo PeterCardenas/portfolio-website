@@ -1,15 +1,17 @@
+import { UIEventHandler, useCallback, useRef, useState } from "react";
 import type { NextPage } from "next";
 import Head from "next/head";
 import About from "components/sections/About";
 import ProgressBar from "components/ProgressBar";
 import Experiences from "components/sections/Experiences";
-import { UIEventHandler, useCallback, useRef, useState } from "react";
 import Projects from "components/sections/Projects";
+import Contact from "components/sections/Contact";
 
 const Home: NextPage = () => {
   const aboutRef = useRef<HTMLDivElement>(null);
   const experiencesRef = useRef<HTMLDivElement>(null);
   const projectsRef = useRef<HTMLDivElement>(null);
+  const contactRef = useRef<HTMLDivElement>(null);
   const [activeSection, setActiveSection] = useState<string>("about");
 
   const scrollHandler: UIEventHandler<HTMLDivElement> = useCallback((evt) => {
@@ -26,6 +28,8 @@ const Home: NextPage = () => {
       setActiveSection("experiences");
     } else if (scrollPosition < projectsCheckpoint) {
       setActiveSection("work");
+    } else {
+      setActiveSection("contact");
     }
   }, []);
 
@@ -39,6 +43,9 @@ const Home: NextPage = () => {
         break;
       case "work":
         projectsRef.current?.scrollIntoView({ behavior: "smooth" });
+        break;
+      case "contact":
+        contactRef.current?.scrollIntoView({ behavior: "smooth" });
         break;
       default:
         break;
@@ -60,6 +67,9 @@ const Home: NextPage = () => {
       </div>
       <div ref={projectsRef}>
         <Projects />
+      </div>
+      <div ref={contactRef}>
+        <Contact />
       </div>
       <ProgressBar
         activeSection={activeSection}
