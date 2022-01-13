@@ -4,7 +4,10 @@ import Document, { Html, Head, Main, NextScript } from "next/document";
 class CustomDocument extends Document {
   render() {
     return (
-      <Html lang="en" className="text-black dark:text-white bg-white">
+      <Html
+        lang="en"
+        className="text-black dark:text-white bg-white overflow-hidden"
+      >
         <Head>
           <link rel="preload" href="/fonts/DIN.ttf" as="font" crossOrigin="" />
           <link
