@@ -1,4 +1,6 @@
 import cx from "classnames";
+import DoubleChevronRight from "components/icons/DoubleChevronRight";
+import useMediaQuery from "hooks/useMediaQuery";
 
 interface ProgressBarProps {
   activeSection: string;
@@ -22,7 +24,8 @@ const ProgressBar = ({
     MARKER_HEIGHT * (numSectionsPassed + 1) +
     DISTANCE_BETWEEN_MARKERS * numSectionsPassed +
     sectionProgress * DISTANCE_BETWEEN_MARKERS;
-  console.log(progress);
+
+  const isMobile = useMediaQuery("mobile");
 
   return (
     <div className="fixed bottom-0 right-8">
@@ -35,21 +38,27 @@ const ProgressBar = ({
               <div key={section} className="flex justify-end">
                 <div
                   className={cx(
-                    "group hover:text-alternate cursor-pointer relative",
+                    "group hover:text-alternate cursor-default lg:cursor-pointer transition-all relative",
                     {
                       "text-alternate": isActive,
-                      "mb-24": index !== sections.length - 1,
+                      "lg:mb-24 mb-0": index !== sections.length - 1,
+                      "mt-[372px] lg:mt-0": index === 0,
                     }
                   )}
                   onClick={() => scrollToSection(sectionLabel)}
                 >
-                  <p>{section}</p>
+                  <p className="text-[0px] lg:text-2xl transition-all">
+                    {section}
+                  </p>
                   <div className="absolute top-0 z-10 -right-10 w-6 h-6 flex items-center justify-center">
                     <div
-                      className={cx("bg-alternate rounded-xl transition-all", {
-                        "w-0 h-0 group-hover:w-6 group-hover:h-6": !isActive,
-                        "w-6 h-6": isActive,
-                      })}
+                      className={cx(
+                        "bg-alternate rounded-xl transition-all",
+                        !isMobile && {
+                          "w-0 h-0 group-hover:w-6 group-hover:h-6": !isActive,
+                          "w-6 h-6": isActive,
+                        }
+                      )}
                     />
                   </div>
                 </div>
@@ -57,11 +66,17 @@ const ProgressBar = ({
             );
           })}
         </div>
-        <div className="relative bg-black w-1 h-[500px] rounded-t-lg">
-          <div
-            className="absolute top-0 left-0 w-full bg-alternate transition-all rounded-t-lg"
-            style={{ height: `${progress}px` }}
-          />
+        <div className="relative h-[500px] w-1 mb-16">
+          <div className="absolute bottom-0 bg-black transition-all lg:h-full w-full h-0 rounded-t-lg">
+            <div
+              className="absolute top-0 left-0 w-full bg-alternate transition-all rounded-t-lg"
+              style={{ height: isMobile ? 0 : `${progress}px` }}
+            />
+          </div>
+
+          <div className="absolute bottom-0 -left-2.5 rounded-xl w-6 h-6 bg-black flex justify-center items-center transition rotate-90 lg:-rotate-90 hover:rotate-90 cursor-pointer">
+            <DoubleChevronRight theme="white" />
+          </div>
         </div>
       </div>
     </div>
