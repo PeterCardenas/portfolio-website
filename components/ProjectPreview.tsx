@@ -12,13 +12,13 @@ interface ProjectPreviewProps {
 const ProjectPreview = ({ project, align }: ProjectPreviewProps) => {
   return (
     <div className="mb-16">
-      <div className="grid grid-cols-11 grid-rows-7 mb-6">
+      <div className="relative pt-11 mb-6">
         <div
           className={cx(
-            "bg-whiter shadow-md p-6 z-20 rounded-lg row-start-1 row-span-4 col-span-6",
+            "absolute top-0 max-h-full bg-whiter shadow-md p-6 z-20 rounded-lg max-w-sm",
             {
-              "col-start-1": align === "left",
-              "col-start-6": align === "right",
+              "left-0": align === "left",
+              "right-0": align === "right",
             }
           )}
         >
@@ -31,21 +31,18 @@ const ProjectPreview = ({ project, align }: ProjectPreviewProps) => {
           <p>{project.description}</p>
         </div>
         <div
-          className={cx("col-span-7 row-start-2 row-span-6 flex", {
-            "col-start-5": align === "left",
-            "col-start-1": align === "right",
+          className={cx("relative flex shadow-md rounded-lg max-w-[500px]", {
+            "ml-auto": align === "left",
           })}
         >
-          <div className="flex relative shadow-md rounded-lg">
-            <div className="absolute w-full h-full bg-alternate transition-opacity duration-500 opacity-50 hover:opacity-10 z-10 rounded-lg" />
-            <Image
-              className="rounded-lg"
-              src={project.image}
-              width="500"
-              height="300"
-              alt={`${project.name} project preview`}
-            />
-          </div>
+          <div className="absolute w-full h-full bg-alternate transition-opacity duration-500 opacity-50 hover:opacity-10 z-10 rounded-lg" />
+          <Image
+            className="rounded-lg"
+            src={project.image}
+            width="500"
+            height="300"
+            alt={`${project.name} project preview`}
+          />
         </div>
       </div>
       <div
