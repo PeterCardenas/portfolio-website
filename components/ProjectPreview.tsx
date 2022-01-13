@@ -56,7 +56,7 @@ const ProjectPreview = ({ project, align }: ProjectPreviewProps) => {
       >
         <div>
           {project.skills.map((skill, index) => (
-            <Fragment key={`${project.name}-skill`}>
+            <Fragment key={`${project.name}-${skill}`}>
               <span>{skill}</span>
               {index !== project.skills.length - 1 && (
                 <span className="text-alternate"> ⋅ </span>
