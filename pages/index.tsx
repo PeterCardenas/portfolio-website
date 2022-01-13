@@ -46,7 +46,10 @@ const Home: NextPage = () => {
   }, []);
 
   return (
-    <div className="w-screen h-screen overflow-scroll" onScroll={scrollHandler}>
+    <div
+      className="w-screen h-screen overflow-y-scroll overflow-x-hidden"
+      onScroll={scrollHandler}
+    >
       <Head>
         <title>Peter&apos;s Portfolio</title>
         <meta name="description" content="View some of my work!" />
