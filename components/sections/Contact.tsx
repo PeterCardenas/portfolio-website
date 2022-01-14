@@ -1,3 +1,4 @@
+import LinkedText from "components/LinkedText";
 import Link from "components/icons/Link";
 import profile from "utils/profile.json";
 
@@ -10,11 +11,12 @@ const Contact = () => {
         <h1 className="mb-16">Feel free to reach out!</h1>
         <h2 className="mb-12">
           Whether you&apos;re hiring, working on a project, or just want to
-          chat, feel free to <a href={about.email}>shoot me an email.</a>
+          chat, feel free to{" "}
+          <LinkedText href={about.email}>shoot me an email.</LinkedText>
         </h2>
         <h2>
           If you&apos;re looking to hire, here&apos;s{" "}
-          <a href={about.resume}>my resume!</a>
+          <LinkedText href={about.resume}>my resume!</LinkedText>
         </h2>
       </div>
       <div className="absolute left-0 bottom-0 px-4 lg:px-8 py-4 w-full bg-black text-white flex lg:flex-row flex-col items-center justify-between">
