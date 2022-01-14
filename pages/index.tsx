@@ -6,6 +6,7 @@ import ProgressBar from "components/ProgressBar";
 import Experiences from "components/sections/Experiences";
 import Projects from "components/sections/Projects";
 import Contact from "components/sections/Contact";
+import profile from "utils/profile.json";
 
 const Home: NextPage = () => {
   const scrollRef = useRef<HTMLDivElement>(null);
@@ -19,7 +20,7 @@ const Home: NextPage = () => {
   useEffect(() => {
     const interval = setInterval(() => {
       if (scrollRef.current) {
-        const { scrollTop, clientHeight } = scrollRef.current;
+        const { scrollTop } = scrollRef.current;
         const aboutCheckpoint = aboutRef.current?.clientHeight ?? 0;
         const experiencesCheckpoint =
           (experiencesRef.current?.clientHeight ?? 0) + aboutCheckpoint;
@@ -75,7 +76,7 @@ const Home: NextPage = () => {
       ref={scrollRef}
     >
       <Head>
-        <title>Peter&apos;s Portfolio</title>
+        <title>{profile.about.firstName}&apos;s Portfolio</title>
         <meta name="description" content="View some of my work!" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
