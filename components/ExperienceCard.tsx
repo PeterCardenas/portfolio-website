@@ -2,8 +2,8 @@ import { Fragment, useState } from "react";
 import Image from "next/image";
 import cx from "classnames";
 import DoubleChevronRight from "components/icons/DoubleChevronRight";
-import { Experience } from "utils/profile";
 import List from "components/icons/List";
+import { Experience } from "utils/profile";
 
 interface ExperienceCardProps {
   experience: Experience;
@@ -13,15 +13,15 @@ const ExperienceCard = ({ experience }: ExperienceCardProps) => {
   const [showMore, setShowMore] = useState(false);
 
   return (
-    <div className="pr-8 pb-4 mb-4">
+    <div className="md:pr-8 pr-2 md:pb-4 pb-2 mb-4">
       <div className="group relative">
-        <div className="absolute bg-alternate transition-opacity opacity-50 group-hover:opacity-75 w-full h-full top-4 md:left-8 left-4 rounded-lg -z-10" />
+        <div className="absolute bg-alternate transition-opacity opacity-50 group-hover:opacity-75 w-full h-full md:top-4 top-2 md:left-8 left-2 rounded-lg -z-10" />
         <div
           className="bg-whiter rounded-lg p-4 cursor-pointer transition shadow-md hover:shadow-xl hover:-translate-y-1 hover:-translate-x-1"
           onClick={() => setShowMore((showMore) => !showMore)}
         >
           <div className="px-4">
-            <div className="flex flex-row">
+            <div className="flex flex-row pb-2">
               <div className="mr-6">
                 <Image
                   className="rounded-lg"
