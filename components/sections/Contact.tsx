@@ -6,10 +6,10 @@ const Contact = () => {
   const { about } = profile;
 
   return (
-    <div className="relative w-screen h-screen pt-20 lg:pt-40">
+    <div className="relative w-screen h-screen short:pt-12 pt-20 lg:pt-40">
       <div className="lg:w-1/2 w-3/4 max-w-5xl mx-auto">
-        <h1 className="mb-16">Feel free to reach out!</h1>
-        <h2 className="mb-12">
+        <h1 className="mb-16 short:mb-12">Feel free to reach out!</h1>
+        <h2 className="mb-12 short:mb-8">
           Whether you&apos;re hiring, working on a project, or just want to
           chat, feel free to{" "}
           <LinkedText href={`mailto:${about.email}`}>
