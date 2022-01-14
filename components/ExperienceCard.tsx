@@ -11,7 +11,7 @@ const ExperienceCard = ({ experience }: ExperienceCardProps) => {
   return (
     <div className="pr-8 pb-4 mb-4">
       <div className="group relative">
-        <div className="absolute bg-alternate transition-opacity opacity-50 group-hover:opacity-75 w-full h-full top-4 left-8 rounded-lg -z-10" />
+        <div className="absolute bg-alternate transition-opacity opacity-50 group-hover:opacity-75 w-full h-full top-4 md:left-8 left-4 rounded-lg -z-10" />
         <div className="bg-whiter rounded-lg p-4 cursor-pointer transition shadow-md hover:shadow-xl hover:-translate-y-1 hover:-translate-x-1">
           <div className="px-4">
             <div className="flex flex-row">
