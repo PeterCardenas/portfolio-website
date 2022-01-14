@@ -50,7 +50,12 @@ const ProgressBar = ({
           }
         }}
       />
-      <div className="fixed z-50 bottom-16 right-8">
+      <div
+        className={cx("fixed bottom-16 right-8", {
+          "z-50": showMenu,
+          "-z-50": !showMenu,
+        })}
+      >
         <div className="flex flex-row justify-end">
           <div className="text-right mr-[26px]">
             {sections.map((section, index) => {
