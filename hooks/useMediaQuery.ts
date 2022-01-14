@@ -11,7 +11,7 @@ type Prefix = keyof typeof prefixToQuery;
 
 const useMediaQuery = (prefix: Prefix) => {
   const query = prefixToQuery[prefix];
-  const [matches, setMatches] = useState(query !== "mobile");
+  const [matches, setMatches] = useState(query === "mobile");
 
   useEffect(() => {
     const mediaQueryList = window.matchMedia(query);
