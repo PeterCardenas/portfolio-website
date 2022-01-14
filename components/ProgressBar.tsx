@@ -63,7 +63,7 @@ const ProgressBar = ({
                   >
                     {section}
                   </p>
-                  <div className="absolute top-0 z-10 -right-10 w-6 h-6 flex items-center justify-center">
+                  <div className="absolute z-10 -right-10 top-1 w-6 h-6 flex items-center justify-center">
                     <div
                       className={cx(
                         "bg-alternate rounded-xl transition-all",
@@ -79,7 +79,7 @@ const ProgressBar = ({
             );
           })}
         </div>
-        <div className="relative h-[500px] w-1 mb-16">
+        <div className="relative h-[500px] w-1 mt-1 mb-16">
           <div
             className={cx(
               "absolute bottom-0 bg-black transition-all w-full rounded-t-lg",
