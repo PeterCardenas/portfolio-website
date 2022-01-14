@@ -16,6 +16,9 @@ module.exports = {
         whiter: "#FAFAFA",
         alternate: "#FD746C",
       },
+      screens: {
+        short: { raw: "(max-height: 700px)" },
+      },
     },
   },
   plugins: [],

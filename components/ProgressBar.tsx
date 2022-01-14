@@ -34,7 +34,7 @@ const ProgressBar = ({
   }, [isMobile]);
 
   return (
-    <>
+    <div className="short:hidden">
       <div
         className={cx(
           "fixed z-50 bottom-0 right-0 transition-all duration-1000 opacity-80",
@@ -44,8 +44,13 @@ const ProgressBar = ({
             "w-0 h-0 bg-transparent": !isMobile,
           }
         )}
+        onClick={() => {
+          if (showMenu) {
+            setShowMenu(false);
+          }
+        }}
       />
-      <div className="fixed z-50 bottom-16 right-8">
+      <div className="fixed bottom-16 right-8 z-50">
         <div className="flex flex-row justify-end">
           <div className="text-right mr-[26px]">
             {sections.map((section, index) => {
@@ -64,12 +69,16 @@ const ProgressBar = ({
                         "mt-[372px]": index === 0 && !showMenu,
                       }
                     )}
-                    onClick={() => {
-                      scrollToSection(sectionLabel);
-                      if (isMobile && sectionLabel !== activeSection) {
-                        setTimeout(() => setShowMenu(false), 750);
-                      }
-                    }}
+                    onClick={
+                      showMenu
+                        ? () => {
+                            scrollToSection(sectionLabel);
+                            if (isMobile && sectionLabel !== activeSection) {
+                              setTimeout(() => setShowMenu(false), 750);
+                            }
+                          }
+                        : undefined
+                    }
                   >
                     <p
                       className={cx("transition-all", {
@@ -116,8 +125,8 @@ const ProgressBar = ({
               className={cx(
                 "absolute bottom-0 -left-2.5 rounded-xl w-6 h-6 bg-black flex justify-center items-center transition cursor-pointer",
                 {
-                  "-rotate-90 hover:rotate-90": showMenu,
-                  "rotate-90 hover:-rotate-90": !showMenu,
+                  "-rotate-90": showMenu,
+                  "rotate-90": !showMenu,
                 }
               )}
               onClick={() => setShowMenu((showMenu) => !showMenu)}
@@ -127,7 +136,7 @@ const ProgressBar = ({
           </div>
         </div>
       </div>
-    </>
+    </div>
   );
 };
 

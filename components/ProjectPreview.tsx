@@ -3,6 +3,7 @@ import Image from "next/image";
 import cx from "classnames";
 import { Project } from "utils/profile";
 import { Fragment } from "react";
+import useMediaQuery from "hooks/useMediaQuery";
 
 interface ProjectPreviewProps {
   project: Project;
@@ -10,6 +11,9 @@ interface ProjectPreviewProps {
 }
 
 const ProjectPreview = ({ project, align }: ProjectPreviewProps) => {
+  const previewHasFullWidth = useMediaQuery("(max-width: 512px)");
+  align = previewHasFullWidth ? "left" : align;
+
   return (
     <div className="mb-16">
       <div className="relative pt-11 mb-6">
@@ -47,8 +51,8 @@ const ProjectPreview = ({ project, align }: ProjectPreviewProps) => {
       </div>
       <div
         className={cx("w-full flex", {
-          "justify-end": align === "left",
-          "justify-start": align === "right",
+          "justify-end text-right": align === "left",
+          "justify-start text-left": align === "right",
         })}
       >
         <div>
