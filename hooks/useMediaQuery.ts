@@ -9,8 +9,9 @@ const prefixToQuery = {
 
 type Prefix = keyof typeof prefixToQuery;
 
-const useMediaQuery = (prefix: Prefix) => {
-  const query = prefixToQuery[prefix];
+const useMediaQuery = (prefix: Prefix | string) => {
+  const query =
+    prefix in prefixToQuery ? prefixToQuery[prefix as Prefix] : prefix;
   const [matches, setMatches] = useState(query === "mobile");
 
   useEffect(() => {
