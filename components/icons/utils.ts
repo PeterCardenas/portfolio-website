@@ -2,6 +2,7 @@ type Theme = "black" | "white" | "alternate";
 
 export interface IconProps {
   theme?: Theme;
+  className?: string;
 }
 
 export const getThemedStyles = (theme?: Theme) => {
