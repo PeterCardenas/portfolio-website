@@ -44,6 +44,11 @@ const ProgressBar = ({
             "w-0 h-0 bg-transparent": !isMobile,
           }
         )}
+        onClick={() => {
+          if (showMenu) {
+            setShowMenu(false);
+          }
+        }}
       />
       <div className="fixed z-50 bottom-16 right-8">
         <div className="flex flex-row justify-end">
