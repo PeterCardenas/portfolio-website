@@ -17,7 +17,7 @@ module.exports = {
         alternate: "#FD746C",
       },
       screens: {
-        short: { raw: "(max-height: 800px)" },
+        short: { raw: "(max-height: 700px)" },
       },
     },
   },
