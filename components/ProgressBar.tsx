@@ -69,12 +69,16 @@ const ProgressBar = ({
                         "mt-[372px]": index === 0 && !showMenu,
                       }
                     )}
-                    onClick={() => {
-                      scrollToSection(sectionLabel);
-                      if (isMobile && sectionLabel !== activeSection) {
-                        setTimeout(() => setShowMenu(false), 750);
-                      }
-                    }}
+                    onClick={
+                      showMenu
+                        ? () => {
+                            scrollToSection(sectionLabel);
+                            if (isMobile && sectionLabel !== activeSection) {
+                              setTimeout(() => setShowMenu(false), 750);
+                            }
+                          }
+                        : undefined
+                    }
                   >
                     <p
                       className={cx("transition-all", {
