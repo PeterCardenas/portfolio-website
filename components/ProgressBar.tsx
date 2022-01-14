@@ -125,8 +125,8 @@ const ProgressBar = ({
               className={cx(
                 "absolute bottom-0 -left-2.5 rounded-xl w-6 h-6 bg-black flex justify-center items-center transition cursor-pointer",
                 {
-                  "-rotate-90 hover:rotate-90 focus:-rotate-90": showMenu,
-                  "rotate-90 hover:-rotate-90 focus:rotate-90": !showMenu,
+                  "-rotate-90": showMenu,
+                  "rotate-90": !showMenu,
                 }
               )}
               onClick={() => setShowMenu((showMenu) => !showMenu)}
