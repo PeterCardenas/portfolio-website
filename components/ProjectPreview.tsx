@@ -24,9 +24,9 @@ const ProjectPreview = ({ project, align }: ProjectPreviewProps) => {
         >
           <a href={project.link} className="inline-flex items-end group mb-4">
             <h3 className="mr-1">{project.name}</h3>
-            <span className="mb-0.5 transition group-hover:translate-x-0.5 group-hover:-translate-y-0.5">
+            <small className="mb-0.5 transition group-hover:translate-x-0.5 group-hover:-translate-y-0.5">
               <Link />
-            </span>
+            </small>
           </a>
           <p>{project.description}</p>
         </div>
@@ -54,9 +54,9 @@ const ProjectPreview = ({ project, align }: ProjectPreviewProps) => {
         <div>
           {project.skills.map((skill, index) => (
             <Fragment key={`${project.name}-${skill}`}>
-              <span>{skill}</span>
+              <small>{skill}</small>
               {index !== project.skills.length - 1 && (
-                <span className="text-alternate"> ⋅ </span>
+                <small className="text-alternate"> ⋅ </small>
               )}
             </Fragment>
           ))}

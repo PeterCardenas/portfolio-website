@@ -41,9 +41,9 @@ const ExperienceCard = ({ experience }: ExperienceCardProps) => {
                 <Fragment
                   key={`${experience.company}-${experience.title}-${skill}`}
                 >
-                  <span>{skill}</span>
+                  <small>{skill}</small>
                   {index !== experience.skills.length - 1 && (
-                    <span className="text-alternate"> ⋅ </span>
+                    <small className="text-alternate"> ⋅ </small>
                   )}
                 </Fragment>
               ))}
@@ -65,16 +65,16 @@ const ExperienceCard = ({ experience }: ExperienceCardProps) => {
                   <div className="flex-grow flex-shrink-0 mt-1 mr-2">
                     <List className="w-[18px] h-[18px]" />
                   </div>
-                  <span>{contribution}</span>
+                  <small>{contribution}</small>
                 </div>
               ))}
             </div>
           </div>
           <div className="flex flex-row justify-end w-full">
             <div className="relative flex flex-row items-end">
-              <span className="text-alternate mr-1">
+              <small className="text-alternate mr-1">
                 See {showMore ? "less" : "more"}
-              </span>
+              </small>
               <div
                 className={cx("transition mb-0.5", {
                   "group-hover:-rotate-90": showMore,
