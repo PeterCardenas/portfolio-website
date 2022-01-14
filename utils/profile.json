@@ -6,7 +6,7 @@
     "linkedinUrl": "https://linkedin.com/peter-cardenas",
     "githubUrl": "https://github.com/PeterCardenas",
     "email": "peterpcardenas@protonmail.com",
-    "resume": "/public/resume.pdf"
+    "resume": "/resume.pdf"
   },
   "experiences": [
     {
@@ -20,19 +20,42 @@
         "Firebase",
         "Node.js",
         "Redux"
+      ],
+      "contributions": [
+        "Developed a mobile app from the ground up using React Native",
+        "Founded an initiative to convert to TypeScript by refactoring the design system with comprehensive type definitions",
+        "Managed and mentored a team of interns through constant support and guidance",
+        "Interviewed for technical positions and provided guidance on selecting new hires"
       ]
     },
     {
       "company": "Gusto",
       "title": "Software Engineer Intern",
       "logo": "/images/gusto-logo.webp",
-      "skills": ["React", "Reflux.js", "Jest", "Ruby on Rails", "RSpec", "SQL"]
+      "skills": ["React", "Reflux.js", "Jest", "Ruby on Rails", "RSpec", "SQL"],
+      "contributions": [
+        "Fully owned a feature for the Scaling Payroll Efficiently initiative across the stack",
+        "Saved $0.03 per customer per month, scaling up to over 100,000 customers",
+        "Communicated with design and engineers across other teams to ensure quality and best practices"
+      ]
     },
     {
       "company": "7-Eleven",
       "title": "Software Engineer Intern",
       "logo": "/images/7-eleven-logo.webp",
-      "skills": ["React Native", "Redux", "Node.js", "Express.js", "SQL", "AWS"]
+      "skills": [
+        "React Native",
+        "Redux",
+        "Node.js",
+        "Express.js",
+        "SQL",
+        "AWS"
+      ],
+      "contributions": [
+        "Collaborated with a 3-intern team for a greenfield project in the R&D department",
+        "Completely architected and implemented the backend system with live data streaming",
+        "Presented solution to senior executives with the potential to scale to 68,000 stores"
+      ]
     }
   ],
   "projects": [
