@@ -34,7 +34,7 @@ const ProgressBar = ({
   }, [isMobile]);
 
   return (
-    <>
+    <div className="short:hidden">
       <div
         className={cx(
           "fixed z-50 bottom-0 right-0 transition-all duration-1000 opacity-80",
@@ -136,7 +136,7 @@ const ProgressBar = ({
           </div>
         </div>
       </div>
-    </>
+    </div>
   );
 };
 
