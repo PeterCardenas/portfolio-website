@@ -12,7 +12,9 @@ const Contact = () => {
         <h2 className="mb-12">
           Whether you&apos;re hiring, working on a project, or just want to
           chat, feel free to{" "}
-          <LinkedText href={about.email}>shoot me an email.</LinkedText>
+          <LinkedText href={`mailto:${about.email}`}>
+            shoot me an email.
+          </LinkedText>
         </h2>
         <h2>
           If you&apos;re looking to hire, here&apos;s{" "}
