@@ -11,10 +11,9 @@ const LinkedText = ({ children, href }: LinkedTextProps) => {
     <a href={href} className="group">
       {elements.map((element, index) => (
         <Fragment key={`${children}-${index}`}>
-          <span className="relative">
+          <span className="relative after:-z-10 after:absolute after:transition-all after:left-0.5 after:bottom-1 after:w-full after:h-1.5 after:group-hover:h-2 after:bg-alternate after:opacity-50 after:group-hover:opacity-75">
             {element}
             {index != elements.length - 1 && " "}
-            <span className="-z-10 absolute transition-all left-0.5 bottom-1 w-[calc(100%+4px)] h-1.5 group-hover:h-2 bg-alternate opacity-50 group-hover:opacity-75" />
           </span>
         </Fragment>
       ))}
