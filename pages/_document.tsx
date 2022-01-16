@@ -30,7 +30,7 @@ class CustomDocument extends Document {
           />
           <meta
             httpEquiv="Content-Security-Policy"
-            content="script-src 'none'"
+            content="default-src https:"
           />
         </Head>
         <body>
