@@ -28,10 +28,6 @@ class CustomDocument extends Document {
             as="font"
             crossOrigin=""
           />
-          <meta
-            httpEquiv="Content-Security-Policy"
-            content="default-src https:"
-          />
         </Head>
         <body>
           <Main />
