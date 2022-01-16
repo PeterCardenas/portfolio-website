@@ -18,18 +18,21 @@ const About = () => {
             <a
               className="mr-6 transition hover:-translate-y-1"
               href={about.linkedinUrl}
+              title="LinkedIn"
             >
               <LinkedinIcon />
             </a>
             <a
               className="mr-6 transition hover:-translate-y-1"
               href={about.githubUrl}
+              title="Github"
             >
               <GithubIcon />
             </a>
             <a
               className="transition hover:-translate-y-1"
               href={`mailto:${about.email}`}
+              title="Email"
             >
               <MailIcon />
             </a>
