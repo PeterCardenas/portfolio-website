@@ -32,7 +32,7 @@ const ExperienceCard = ({ experience }: ExperienceCardProps) => {
                 />
               </div>
               <div>
-                <h3>{experience.company}</h3>
+                <h2>{experience.company}</h2>
                 <p>{experience.title}</p>
               </div>
             </div>

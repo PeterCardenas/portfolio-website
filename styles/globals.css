@@ -36,15 +36,15 @@
   }
 
   h2 {
-    @apply font-normal lg:text-4xl text-3xl transition-all;
-  }
-
-  h3 {
     @apply font-medium lg:text-2xl text-xl transition-all;
   }
 
   p {
     @apply font-light lg:text-xl text-lg transition-all;
+  }
+
+  strong {
+    @apply font-normal lg:text-4xl text-3xl transition-all;
   }
 
   small {
