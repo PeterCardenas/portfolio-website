@@ -50,13 +50,12 @@ const ExperienceCard = ({ experience }: ExperienceCardProps) => {
             </div>
             <div
               className={cx(
-                "mt-2 overflow-hidden transition-all duration-300 cursor-default",
+                "mt-2 overflow-hidden transition-all duration-300",
                 {
                   "max-h-screen": showMore,
                   "max-h-0": !showMore,
                 }
               )}
-              onClick={(evt) => evt.stopPropagation()}
             >
               {experience.contributions.map((contribution, index) => (
                 <div
