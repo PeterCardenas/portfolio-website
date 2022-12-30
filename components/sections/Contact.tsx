@@ -9,17 +9,21 @@ const Contact = () => {
     <div className="relative w-screen h-screen short:pt-12 pt-20 lg:pt-40">
       <div className="lg:w-1/2 w-3/4 max-w-5xl mx-auto">
         <h1 className="mb-16 short:mb-12">Feel free to reach out!</h1>
-        <strong className="mb-12 short:mb-8">
-          Whether you&apos;re hiring, working on a project, or just want to
-          chat, feel free to{" "}
-          <LinkedText href={`mailto:${about.email}`}>
-            shoot me an email.
-          </LinkedText>
-        </strong>
-        <strong>
-          If you&apos;re looking to hire, here&apos;s{" "}
-          <LinkedText href={about.resume}>my resume!</LinkedText>
-        </strong>
+        <p className="mb-12 short:mb-8">
+          <strong>
+            Whether you&apos;re hiring, working on a project, or just want to
+            chat, feel free to{" "}
+            <LinkedText href={`mailto:${about.email}`}>
+              shoot me an email.
+            </LinkedText>
+          </strong>
+        </p>
+        <p>
+          <strong>
+            If you&apos;re looking to hire, here&apos;s{" "}
+            <LinkedText href={about.resume}>my resume!</LinkedText>
+          </strong>
+        </p>
       </div>
       <div className="absolute left-0 bottom-0 px-4 lg:px-8 py-4 w-full bg-black text-white flex lg:flex-row flex-col items-center justify-between">
         <div className="items-end opacity-0 lg:inline-flex hidden">
